@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StudentManager</class>
+ <widget class="QWidget" name="StudentManager">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>799</width>
+    <height>608</height>
+   </rect>
+  </property>
+  <layout class="QHBoxLayout" name="main_layout">
+   <item>
+    <layout class="QVBoxLayout" name="left_layout">
+     <item>
+      <widget class="CaptionLabel" name="label_info">
+       <property name="text">
+        <string>学生信息</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="CaptionLabel" name="label_name">
+       <property name="text">
+        <string>姓名</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="LineEdit" name="line_name"/>
+     </item>
+     <item>
+      <widget class="CaptionLabel" name="label_age">
+       <property name="text">
+        <string>年龄</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="LineEdit" name="line_age"/>
+     </item>
+     <item>
+      <widget class="CaptionLabel" name="label_class">
+       <property name="text">
+        <string>班级</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="LineEdit" name="line_class"/>
+     </item>
+     <item>
+      <widget class="CaptionLabel" name="label_grade">
+       <property name="text">
+        <string>年级</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="LineEdit" name="line_grade"/>
+     </item>
+     <item>
+      <widget class="PushButton" name="button_add">
+       <property name="text">
+        <string>添加</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="PushButton" name="button_delete">
+       <property name="text">
+        <string>删除</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="PushButton" name="button_update">
+       <property name="text">
+        <string>修改</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="PushButton" name="button_clear">
+       <property name="text">
+        <string>清空</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="CalendarPicker" name="CalendarPicker">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="right_layout">
+     <item>
+      <widget class="CaptionLabel" name="label_query">
+       <property name="text">
+        <string>查询条件</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="ComboBox" name="combo_query">
+       <item>
+        <property name="text">
+         <string>按姓名查询</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>按年龄查询</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>按班级查询</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>按年级查询</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>按成绩查询</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="LineEdit" name="line_query"/>
+     </item>
+     <item>
+      <widget class="PushButton" name="button_query">
+       <property name="text">
+        <string>查询</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="TableWidget" name="table_student">
+       <property name="columnCount">
+        <number>6</number>
+       </property>
+       <column>
+        <property name="text">
+         <string>学号</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>姓名</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>性别</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>年龄</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>班级</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>专业</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CalendarPicker</class>
+   <extends>PushButton</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

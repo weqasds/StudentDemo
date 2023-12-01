@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>CourseManager</class>
+  <widget class="QWidget" name="CourseManager">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>800</width>
+        <height>600</height>
+      </rect>
+    </property>
+    <layout class="QVBoxLayout" name="main_layout">
+      <item>
+        <layout class="QHBoxLayout" name="top_layout">
+          <item>
+            <layout class="QVBoxLayout" name="left_layout">
+              <item>
+                <widget class="CaptionLabel" name="label_info">
+                  <property name="text">
+                    <string>课程信息</string>
+                  </property>
+                  <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="CaptionLabel" name="label_name">
+                  <property name="text">
+                    <string>课程名称</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="LineEdit" name="line_name" />
+              </item>
+              <item>
+                <widget class="CaptionLabel" name="label_teacher">
+                  <property name="text">
+                    <string>教师</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="LineEdit" name="line_teacher" />
+              </item>
+              <item>
+                <widget class="CaptionLabel" name="label_hours">
+                  <property name="text">
+                    <string>课时</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="LineEdit" name="line_hours" />
+              </item>
+              <item>
+                <widget class="PushButton" name="button_add">
+                  <property name="text">
+                    <string>添加</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="PushButton" name="button_delete">
+                  <property name="text">
+                    <string>删除</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="PushButton" name="button_update">
+                  <property name="text">
+                    <string>修改</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="PushButton" name="button_clear">
+                  <property name="text">
+                    <string>清空</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <spacer name="verticalSpacer">
+                  <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                    <size>
+                      <width>20</width>
+                      <height>40</height>
+                    </size>
+                  </property>
+                </spacer>
+              </item>
+            </layout>
+          </item>
+          <item>
+            <spacer name="horizontalSpacer">
+              <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+                <size>
+                  <width>40</width>
+                  <height>20</height>
+                </size>
+              </property>
+            </spacer>
+          </item>
+        </layout>
+      </item>
+      <item>
+        <layout class="QVBoxLayout" name="bottom_layout">
+          <item>
+            <widget class="CaptionLabel" name="label_query">
+              <property name="text">
+                <string>查询条件</string>
+              </property>
+              <property name="alignment">
+                <set>Qt::AlignCenter</set>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QComboBox" name="combo_query">
+              <item>
+                <property name="text">
+                  <string>按课程名称查询</string>
+                </property>
+              </item>
+              <item>
+                <property name="text">
+                  <string>按教师查询</string>
+                </property>
+              </item>
+              <item>
+                <property name="text">
+                  <string>按课时查询</string>
+                </property>
+              </item>
+            </widget>
+          </item>
+          <item>
+            <widget class="LineEdit" name="line_query" />
+          </item>
+          <item>
+            <widget class="PushButton" name="button_query">
+              <property name="text">
+                <string>查询</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="TableWidget" name="table_course">
+              <property name="rowCount">
+                <number>4</number>
+              </property>
+              <property name="columnCount">
+                <number>7</number>
+              </property>
+              <property name="verticalHeaderLabels" stdset="0">
+                <stringlist></stringlist>
+              </property>
+              <column>
+                <property name="text">
+                  <string>周一</string>
+                </property>
+              </column>
+              <column>
+                <property name="text">
+                  <string>周二</string>
+                </property>
+              </column>
+              <column>
+                <property name="text">
+                  <string>周三</string>
+                </property>
+              </column>
+              <column>
+                <property name="text">
+                  <string>周四</string>
+                </property>
+              </column>
+              <column>
+                <property name="text">
+                  <string>周五</string>
+                </property>
+              </column>
+              <column>
+                <property name="text">
+                  <string>周六</string>
+                </property>
+              </column>
+              <column>
+                <property name="text">
+                  <string>周日</string>
+                </property>
+              </column>
+              <row>
+                <property name="text">
+                  <string>8:00-9:50</string>
+                </property>
+              </row>
+              <row>
+                <property name="text">
+                  <string>10:00-12:00</string>
+                </property>
+              </row>
+              <row>
+                <property name="text">
+                  <string>14:00-15:50</string>
+                </property>
+              </row>
+              <row>
+                <property name="text">
+                  <string>16:00-18:00</string>
+                </property>
+              </row>
+            </widget>
+          </item>
+        </layout>
+      </item>
+    </layout>
+  </widget>
+  <resources />
+  <connections />
+</ui>

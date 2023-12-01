@@ -26,13 +26,14 @@ class MainWindow(FluentWindow):
     def __init__(self):
         super().__init__()
         self.initWindow()
-        self.homeInterface = ()
-        self.studentManage = ()
-        self.courseManage = ()
-        self.scoreManage = ()
-        self.teacherManage = ()
-        self.adminManage = ()
-        self.settingInterface = ()
+        self.homeInterface = ()  # 登陆后开始界面
+        self.personalInquiry = ()  # 个人信息查询取决于登录界面，如果是管理员登录不显示 完成
+        self.studentManage = ()  # 学生管理 完成 CRUD完成
+        self.courseManage = ()  # 课程管理 完成 CRUD完成
+        self.scoreManage = ()  # 成绩管理 完成 CRUD
+        self.teacherManage = ()  # 教师管理 开始
+        self.adminManage = ()  # 管理员管理界面 未开始
+        self.settingInterface = ()  # 程序设置界面 完成
 
         # effect enable
         self.navigationInterface.setAcrylicEnabled(isEnabled=True)
@@ -63,9 +64,17 @@ class MainWindow(FluentWindow):
         )
 
     def initWindow(self):
-        self.setupUi()
+        # self.setupUi(self)
+        self.setObjectName("MainWindow")
+        self.resize(800, 600)
+        self.centralwidget = QtWidgets.QWidget(self)
+        self.centralwidget.setObjectName("centralwidget")
+        # self.setCentralWidget(self.centralwidget)
+
+        self.retranslateUi(self)
+        QtCore.QMetaObject.connectSlotsByName(self)
         self.splashScreen = SplashScreen(self.windowIcon(), self)
-        self.splashScreen.setIconSize()
+        self.splashScreen.setIconSize(QtCore.QSize(106, 106))
         self.splashScreen.raise_()
 
         desktop = QApplication.desktop().availableGeometry()
@@ -80,15 +89,15 @@ class MainWindow(FluentWindow):
         if hasattr(self, "splashScreen"):
             self.splashScreen.resize(self.size())
 
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+    def setupUi(self):
+        self.setObjectName("MainWindow")
+        self.resize(800, 600)
+        self.centralwidget = QtWidgets.QWidget(self)
         self.centralwidget.setObjectName("centralwidget")
-        MainWindow.setCentralWidget(self.centralwidget)
+        self.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(self)
+        QtCore.QMetaObject.connectSlotsByName(self)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
